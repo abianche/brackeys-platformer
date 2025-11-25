@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c670cc8o2pjxx"]
+[gd_scene load_steps=12 format=4 uid="uid://c670cc8o2pjxx"]
 
 [ext_resource type="TileSet" uid="uid://odcacq00orpu" path="res://tileset.tres" id="1_iywne"]
 [ext_resource type="PackedScene" uid="uid://djv6j7xvxhfw3" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0r451ib0amro" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://x43ixgtqr3nh" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://8y5ql1pp52n7" path="res://scenes/slime.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://7axmdxbrgto4" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p57ef"]
 
@@ -122,3 +123,35 @@ autoplay = "move"
 
 [node name="Slime" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(615, 128)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = -69.0
+offset_top = 112.0
+offset_right = 20.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(0.007843138, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Space to jump."
+
+[node name="Label2" type="Label" parent="Labels"]
+offset_left = 446.0
+offset_top = 129.0
+offset_right = 535.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.007843138, 0.14901961, 0.34901962, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Falling hurts..."
+
+[node name="Label3" type="Label" parent="Labels"]
+offset_left = 818.0
+offset_top = -7.0
+offset_right = 914.0
+offset_bottom = 6.0
+theme_override_colors/font_color = Color(0.09803922, 0.3137255, 0.7529412, 1)
+theme_override_fonts/font = ExtResource("7_u5sy4")
+theme_override_font_sizes/font_size = 8
+text = "Almost there..."
